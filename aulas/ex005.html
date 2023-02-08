@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: rgb(171, 28, 28);
+            color: white;
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar<strong> DOM</strong> em javascript</p>
+    <div id="msg">Clique em min</div>
+    <div name="aqui">Ou em mim</div>
+    <div class="vini">Tambem em mim!!!</div>
+    <div id="vava"> Mas não eu...</div>
+    <script>
+
+        window.document.write('Olá, Mundo! ');
+        window.document.write( window.document.charset );
+        window.document.write( window.navigator.appName);
+        window.document.write( window.document.URL);
+
+        var p1 = window.document.getElementsByTagName('p')[0];
+        p1.style.color = 'blue';
+        window.document.write('Está escrito assim:' +           
+        p1.innerText);
+        //window.alert(p2.innerText);
+
+        var p2 = window.document.getElementsByTagName('p')[1];
+        var corpo = window.document.body;
+        var h1 = window.document.getElementsByTagName('h1')[0];
+        h1.style.color = 'orange'
+        corpo.style.background = 'black';
+        
+       
+        var d = window.document.getElementById('msg');
+        d.style.color = 'black';
+        d.style.background = 'grey';
+        //d.innerText = 'Estou aguardandoooooo'//mudou o conteudo da div
+        window.document.getElementById('msg').innerText = 'Olá, Mundo!!'// seria outra maneira de modificar o conteudo da d,, porem esse comando fica grande de mais
+        
+        var e = window.document.getElementsByName('aqui')[0];
+        e.style.background = 'white';
+        e.style.color = 'black';
+
+        var f = window.document.getElementsByClassName('vini')[0];
+        f.style.color = 'white';
+
+        var g = window.document.querySelector('div#vava')
+        g.style.background = 'orange'
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Qual seu país..</h1>
+    De onde você vem: <input type="text" id="nacionalidade">
+    <input type="button" value="enviar" onclick="clicar()">
+    <div id="res"></div>
+
+    <script>
+        var nacionalidade1 = window.document.getElementById('nacionalidade')
+        var resposta = window.document.querySelector('div#res')
+        function clicar(){
+            if(nacionalidade1 == 'brasil'){
+                resposta.innerHTML = 'Você é Brasileiro ' 
+            }else{
+                resposta.innerHTML = 'Você é estrangeiro'
+            }
+        }
+    </script>
+    
+</body>
+</html>
